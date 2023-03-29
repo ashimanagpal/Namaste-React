@@ -1,4 +1,9 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body {
     font-family: sans-serif;
 }
 .header {
@@ -51,4 +56,4 @@ body {
     display: flex;
     flex-wrap: wrap;
     grid-gap: 10px;
-}
+}  */

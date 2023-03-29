@@ -5,7 +5,7 @@ export const RestaurantList = [
       type: "restaurant",
       data: {
         type: "F",
-        id: "136436",
+        id: "01",
         name: "KFC",
         uuid: "00909183-d993-4068-bfcd-07d7d9185cf8",
         city: "11",
@@ -93,7 +93,7 @@ export const RestaurantList = [
       type: "restaurant",
       data: {
         type: "F",
-        id: "136436",
+        id: "02",
         name: "Dominoes",
         uuid: "00909183-d993-4068-bfcd-07d7d9185cf8",
         city: "12",
@@ -181,7 +181,7 @@ export const RestaurantList = [
       type: "restaurant",
       data: {
         type: "F",
-        id: "136436",
+        id: "03",
         name: "Nagpal Dhaba",
         uuid: "00909183-d993-4068-bfcd-07d7d9185cf8",
         city: "12",
