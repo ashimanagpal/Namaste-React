@@ -4,6 +4,7 @@ import { useEffect, useState, useContext} from "react";
 import Shimmer from "./shimmer";
 import { Link } from 'react-router-dom';
 import UserContext from "../utils/UserContext";
+import Crousal from "./Crousal";
 
 
 function filterData(searchText, restaurants) {
@@ -47,6 +48,7 @@ const Body = ({user1}) => {
     <Shimmer />
   ) : (
     <>
+    <Crousal/>
       <div className="flex justify-center p-2">
         <input
           type="text"
@@ -70,6 +72,7 @@ const Body = ({user1}) => {
           {" "}
           Search{" "}
         </button> 
+        
 
         {/* <input className="border border-r m-2" value={user.name} onChange={
           e => setUser({
@@ -84,7 +87,7 @@ const Body = ({user1}) => {
           })
           }></input> */}
       </div>
-
+      
       <div className="flex gap-4 flex-wrap border rounded-md justify-center p-2 ">
         {/*Write Logic here when no restaurant found while we search */}
         {filteredrestaurants.map((restaurant) => {

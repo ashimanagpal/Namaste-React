@@ -39,11 +39,13 @@ const Header = () =>{
 
   const {user} = useContext(userContext);
 
-  // const cartItems = useSelector();
+  const cartItems = useSelector(store => store.cart.items);
 
   console.log("inside Header component");
+  console.log(cartItems + "Itemsssssssssssssss");
 
     return (
+      
         <div className='flex px-4 justify-between'>
           <Title/>
         <div className='nav-items flex items-center '>
@@ -52,7 +54,7 @@ const Header = () =>{
           <li><Link to="/About">About Us</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
           <li><Link to="/instamart">Instamart</Link></li>
-          <li>Cart 4 items <FontAwesomeIcon icon="check-square" /> <FontAwesomeIcon icon="coffee" /></li>
+          <li className="cart">Cart <span class="cart-number"><svg viewBox="-1 0 37 32" height="20" width="20" fill="#686b78"><path d="M4.438 0l-2.598 5.11-1.84 26.124h34.909l-1.906-26.124-2.597-5.11z"></path></svg><span class="_2vS77">{cartItems.length}</span></span>  <FontAwesomeIcon icon="check-square" /> <FontAwesomeIcon icon="coffee" /></li>
         </ul>
         
         

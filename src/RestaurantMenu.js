@@ -26,23 +26,40 @@ const restaurantmenu = () => {
 
   return (!restaurantmenu) ? <Shimmer /> : (
     <div className="menu">
-      <pre>{JSON.stringify(restaurantmenu, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(restaurantmenu, null, 2)}</pre> */}
       <div>
-        <h1>Restaurant id: {restaurantmenu?.cards[0]?.card?.card?.info?.id}</h1>
         <h2>{restaurantmenu?.cards[0]?.card?.card?.info?.name}</h2>
-        <h1>{restaurantmenu?.restaurantSlug?.restaurant}</h1>
-        <h1>{restaurantmenu?.cards[0]?.card?.card?.info?.avgRating}Stars</h1>
-        <img src={IMG_CDN_URL + restaurantmenu?.cards[0]?.card?.card?.info?.cloudinaryImageId} />
+        <h1>{restaurantmenu?.cards[0]?.card?.card?.info?.cuisines}</h1>
+        <h1>{restaurantmenu?.cards[0]?.card?.card?.info?.locality}</h1>
+        <h1>{restaurantmenu?.cards[0]?.card?.card?.info?.sla?.lastMileTravelString}</h1>
+        <button className="rating">
+          <span className="rating-number" >
+            <span className="icon-star"></span> 
+            <span>3.9</span> 
+          </span>
+          <span class="totalRating">10K+ ratings</span>  
+        </button>
+
+
+
+        {/* <img src={IMG_CDN_URL + restaurantmenu?.cards[0]?.card?.card?.info?.cloudinaryImageId} /> */}
         <h1>{restaurantmenu?.costForTwoMsg}</h1>
         <h1>{restaurantmenu?.data?.menu?.item}</h1>
       </div>
       <div>
         <div>
-          {console.log(Object.values??(restaurantmenu?.menu?.items))}
-          <h1>Menu</h1>
+          {/* {console.log(Object.values??(restaurantmenu?.menu?.items))} */}
+          <h1>Menusxas</h1>
           <ul>
             {Object.values??(restaurantmenu?.menu?.items).map((item) => (
-                <li key = {item.id} >{item.name} <span>{item.price}</span></li>
+                <li key = {item.id} >
+                  {/* {restaurantmenu?.cards?.card?.card?.info?.name}  */}
+                  
+                  {restaurantmenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.card[1]?.card?.itemCards?.card?.name}
+                
+                {/* <span>{restaurantmenu?.cards[0]?.card?.card?.info?.price}</span> */}
+                
+                </li>
             ))}
            
 
