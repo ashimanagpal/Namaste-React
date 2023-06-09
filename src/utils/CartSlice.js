@@ -3,15 +3,18 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const cartSlice = createSlice({
     name : 'cart',
+    
 
     initialState : {
-        items: ["Apple", "Mango"],
+        items: [],
+      
     },
 
-    reducer: {  //reducer() does not return anything, It just take a state and modify it
+    reducers: {  //reducers() does not return anything, It just take a state and modify it
 
         addItem: (state, action) => {   // in this state is current state and here add button will call the reducer() to modify the cartSlice
-            state.action.push(action.payload); //Here we write the logic.here state is modify 
+            state.items.push(action.payload); //Here we write the logic.here state is modify, in action.payload we recive value grapes
+           
         },
 
         removeItem: (state, action) =>{ //This action is baically action which we dispatch from component

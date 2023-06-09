@@ -13,7 +13,7 @@ const Crousal = ()=>{
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
                 </svg>
             </button> 
-            <div className="w-[68%] h-72  p-4 relative overflow-hidden">
+            <div className="w-[75%] h-72  p-4 relative overflow-hidden">
                 <div className="flex  w-full  absolute   py-2 overflow-x-auto scroll-smooth " id="box">
                     {crousalIds.map((id)=> <img key={id} className="w-60 m-2 p-2 rounded-2xl" alt="someImg" src={CROUSAL_CDN+id} />)} 
                 </div>

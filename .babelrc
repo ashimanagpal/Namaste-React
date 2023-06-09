@@ -1,0 +1,6 @@
+{
+  "presets" : [
+          ["@babel/preset-env", { "targets" : {"node": "current" } } ],         // This is required for import written in test.js files becz import is not understand by js file
+          ["@babel/preset-react", { "runtime" : "automatic"}]                   // This is required for JSX code written in test.js files
+        ]
+}

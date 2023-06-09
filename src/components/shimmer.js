@@ -1,7 +1,7 @@
 const Shimmer = () => {
   return (
     // <h1>Loading----------------------</h1>
-    <div className="flex flex-wrap gap-6 m-6">
+    <div className="flex flex-wrap gap-6 m-6" data-testid="shimmer-ui">
       {Array(10)
         .fill("")
         .map((e, index) => (
